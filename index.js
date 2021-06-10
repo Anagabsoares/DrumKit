@@ -34,11 +34,12 @@ function makeSound(key){
     }
 }
 
+// Detecting keyboad keydown. ps. The keypress evcent is deprecated
 document.addEventListener("keydown", function(event){
         makeSound(event.key)
 })
 
-
+//Detecting Buttons
 const numberOfDrumButtons = document.querySelectorAll('.drum').length;
 for(var i=0; i< numberOfDrumButtons; i++){
     document.querySelectorAll(".drum")[i].addEventListener("click", function(){
